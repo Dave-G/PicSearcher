@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Pic Searcher</string>
-    <string name="searchTitle">Picture Viewer</string>
     <string name="imageGridTitle">Search Results</string>
     <string name="imageDetailsTitle">Details</string>
     <string name="searchPrompt">Search text</string>
@@ -13,6 +12,12 @@
     <string name="comments">Comments:</string>
     <string name="views">Views:</string>
     <string name="webLink">Web Link:</string>
+    <string name="errorNoSearch">Please enter a search term.</string>
+    <string name="errorNoImages">No images found.</string>
+    <string name="pixabayLogo">Pixabay Logo</string>
     <string name="pixabayKey">8321331-bcad4eff047e169036cb377e7</string>
-    <string name="pixabayBaseURL">https://pixabay.com/api/?key=8321331-bcad4eff047e169036cb377e7&amp;q=</string>
+    <string name="pixabayBaseURL">https://pixabay.com/api/?key=8321331-bcad4eff047e169036cb377e7&amp;per_page=100&amp;q=</string>
+    <string name="extrasSearchString">ExtrasSearchString</string>
+    <string name="extrasDetailsJSON">ExtrasDetailsJSON</string>
+    <string name="credits">Created by David Gedarovich</string>
 </resources>

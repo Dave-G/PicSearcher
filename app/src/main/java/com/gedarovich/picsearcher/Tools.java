@@ -3,7 +3,6 @@ package com.gedarovich.picsearcher;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,7 +14,7 @@ import android.widget.TextView;
 public class Tools  {
 
     private static Typeface defaultTypeface;
-    private static String typefaceName = "AliquamREG.ttf";
+    private static String typefaceName = "swanse.ttf";
 
     // Set the typeface
     public static void setTypeface(Activity act, TextView tv){
