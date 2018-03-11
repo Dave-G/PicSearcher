@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gedarovich.picsearcher.ImageDetails"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/imageDetailsTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/backButton"
+            android:textSize="24sp"
+            android:padding="16dp"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/imageDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imageDetailsTitle"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:padding="16dp"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/default_image_wide"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/imageContent"/>
+
+    <TextView
+        android:id="@+id/postedBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/postedBy"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp"/>
+
+    <TextView
+        android:id="@+id/favorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/favorites"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp" />
+
+    <TextView
+        android:id="@+id/likes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/likes"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/comments"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp" />
+
+    <TextView
+        android:id="@+id/views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/views"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp" />
+
+    <TextView
+        android:id="@+id/webLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/webLink"
+        android:layout_gravity="start"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingRight="32dp"
+        android:paddingEnd="32dp"/>
+
+</LinearLayout>

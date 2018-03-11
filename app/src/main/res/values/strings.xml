@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pic Searcher</string>
+    <string name="searchTitle">Picture Viewer</string>
+    <string name="imageGridTitle">Search Results</string>
+    <string name="imageDetailsTitle">Details</string>
+    <string name="searchPrompt">Search text</string>
+    <string name="searchButton">Search</string>
+    <string name="backButton">&lt;</string>
+    <string name="imageContent">Pixabay Image</string>
+    <string name="postedBy">Posted By:</string>
+    <string name="favorites">Favorites:</string>
+    <string name="likes">Likes:</string>
+    <string name="comments">Comments:</string>
+    <string name="views">Views:</string>
+    <string name="webLink">Web Link:</string>
+    <string name="pixabayKey">8321331-bcad4eff047e169036cb377e7</string>
+    <string name="pixabayBaseURL">https://pixabay.com/api/?key=8321331-bcad4eff047e169036cb377e7&amp;q=</string>
+</resources>
