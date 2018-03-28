@@ -1,15 +1,10 @@
 package com.gedarovich.picsearcher;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -23,7 +18,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -130,7 +124,7 @@ public class ImageGrid extends AppCompatActivity {
             }
         }
         catch (Exception e){
-            e.printStackTrace();
+            Log.e("Error", e.getMessage());
         }
         return new ArrayList<>();
     }
@@ -149,7 +143,7 @@ public class ImageGrid extends AppCompatActivity {
                     intent.putExtra(getString(R.string.extrasDetailsJSON), hitsArray.getJSONObject(position).toString());
                 }
                 catch (Exception e){
-                    e.printStackTrace();
+                    Log.e("Error", e.getMessage());
                 }
                 // Open image details page
                 startActivity(intent);

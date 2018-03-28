@@ -2,26 +2,17 @@ package com.gedarovich.picsearcher;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.AsyncTask;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
-
-import java.io.InputStream;
 import java.util.ArrayList;
 
-public class GridViewAdapter extends ArrayAdapter {
+public class GridViewAdapter extends ArrayAdapter<String> {
     private Context context;
     private int layoutResourceId;
     private ArrayList<String> urls = new ArrayList<>();
@@ -33,8 +24,9 @@ public class GridViewAdapter extends ArrayAdapter {
         this.urls = urls;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         final ViewHolder holder;
         // Create view
         if (convertView == null) {
@@ -46,16 +38,18 @@ public class GridViewAdapter extends ArrayAdapter {
         }
         else {
             holder = (ViewHolder) convertView.getTag();
+            holder.aSyncLoader.cancel(true);
         }
         // Set placeholders
         holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.default_image));
         // Load images asynchronously in to each view
-        AsyncImageLoader asyncLoader = new AsyncImageLoader(holder.image);
-        asyncLoader.execute(urls.get(position));
+        holder.aSyncLoader = new AsyncImageLoader(holder.image);
+        holder.aSyncLoader.execute(urls.get(position));
         return convertView;
     }
 
     static class ViewHolder {
         ImageView image;
+        AsyncImageLoader aSyncLoader;
     }
 }

@@ -22,9 +22,8 @@ public class AsyncImageLoader extends AsyncTask<String, Void, Bitmap> {
             InputStream in = new java.net.URL(url).openStream();
             mIcon11 = BitmapFactory.decodeStream(in);
         }
-        catch (Exception e) {
+        catch (Throwable e) {
             Log.e("Error", e.getMessage());
-            e.printStackTrace();
         }
         return mIcon11;
     }
